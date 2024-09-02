@@ -13,7 +13,7 @@ bool House::addAppliance(Appliance *appliance) {
     if (number < numAppliances) {
         appliances[number] = appliance;
         number++;
-        cout << appliance->get_PowerRating() << " watts appliance added to the house" << endl;
+        cout << appliance->get_powerRating() << " watts appliance added to the house" << endl;
         return true;
     }
     return false;
