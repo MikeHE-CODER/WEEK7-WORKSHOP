@@ -13,6 +13,6 @@ public:
 private:
   Appliance **appliances;
   int numAppliances;
-  int number;
+  int number=0;
 };
 #endif
