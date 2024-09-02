@@ -3,9 +3,9 @@
 using namespace std;
 Appliance::Appliance() : powerRating(0), isOn(false){};
 Appliance::Appliance(int powerRating) : powerRating(powerRating), isOn(false){};
-bool Appliance::get_ison() { return isOn; };
-int Appliance::get_PowerRating() { return powerRating; };
-void Appliance::set_PowerRating(int powerRating) {
+bool Appliance::get_isOn() { return isOn; };
+int Appliance::get_powerRating() { return powerRating; };
+void Appliance::set_powerRating(int powerRating) {
   this->powerRating = powerRating;
 };
 void Appliance::set_isOn(bool ison) { this->isOn = ison; };
