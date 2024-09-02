@@ -27,7 +27,5 @@ double House::getTotalPowerConsumption() {
     return totalPowerConsumption;
 }
 
-House::~House() {
-    delete[] appliances;
-}
+
 
