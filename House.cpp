@@ -1,14 +1,23 @@
-#include "TV.h"
+#include "House.h"
 #include "Appliance.h"
+#include "Fridge.h"
+#include "TV.h"
 #include <iostream>
 using namespace std;
-TV::TV(){};
-TV::TV(int powerRating, double screenSize) {
-  this->screenSize = screenSize;
-  this->set_powerRating(powerRating);
+House::House() : Appliance(), appliances(nullptr) {}
+House::House(int numAppliances) : appliances(new Appliance *[numAppliances]) {}
+bool House::addAppliance(Appliance *appliance) {
+  if (number < numAppliances) {
+    appliances[number] = appliance;
+    number++;
+    return true;
+  }
+  return false;
 }
-void TV::setScreenSize(double screenSize) { this->screenSize = screenSize; };
-double TV::getScreenSize() { return screenSize; };
-double TV::getPowerConsumption() {
-  return this->get_powerRating() * screenSize / 10;
-};
+double House::getTotalPowerConsumption() {
+  double totalPowerConsumption = 0;
+  for (int i = 0; i < number; i++) {
+    totalPowerConsumption += appliances[i]->getPowerConsumption();
+  }
+  return totalPowerConsumption;
+}
