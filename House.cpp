@@ -4,8 +4,8 @@
 #include "TV.h"
 #include <iostream>
 using namespace std;
-House::House() : Appliance(), appliances(nullptr) {}
-House::House(int numAppliances) : appliances(new Appliance *[numAppliances]) {}
+House::House() : appliances(nullptr), numAppliances(0), number(0) {}
+House::House(int numAppliances) : appliances(new Appliance *[numAppliances])，number(0) {}
 bool House::addAppliance(Appliance *appliance) {
   if (number < numAppliances) {
     appliances[number] = appliance;
