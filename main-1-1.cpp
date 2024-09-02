@@ -9,5 +9,5 @@ int main() {
   a.setisOn(1);
   a.turnOn();
   a.turnOff();
-  a.getPowerComsumption();
+  a.getPowerConsumption();
 }
