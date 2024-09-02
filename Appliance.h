@@ -8,10 +8,10 @@ public:
   Appliance(int powerRating);
   void turnOn();
   void turnOff();
-  bool getison();
-  int getPowerRating();
-  void setPowerRating(int powerRating);
-  void setisOn(bool ison);
+  bool get_ison();
+  int get_PowerRating();
+  void set_PowerRating(int powerRating);
+  void set_isOn(bool ison);
   virtual double getPowerConsumption();
 
 private:
